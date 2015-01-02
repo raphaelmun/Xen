@@ -9,6 +9,15 @@ namespace Xen2D
         public static Random Random { get { return random; } }
 
         /// <summary>
+        /// Sets a manual random number seed
+        /// </summary>
+        /// <param name="seed">Seed for the Random Number Generator</param>
+        public static void SetSeed( int seed )
+        {
+            random = new Random( seed );
+        }
+
+        /// <summary>
         /// Returns a value between 0.0 and 1.0
         /// </summary>
         /// <returns>The randomly generated value</returns>

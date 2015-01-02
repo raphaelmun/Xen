@@ -207,8 +207,8 @@ namespace Xen2D
         /// <returns>True if the specified point is within the circle.  False otherwise.</returns>
         public static bool ContainsForCircle( Vector2 point, ICircle2D circle )
         {
-            float centerDistance = ( circle.Center - point ).Length();
-            return ( centerDistance <= circle.Radius );
+            float centerDistanceSquared = ( circle.Center - point ).LengthSquared();
+            return ( centerDistanceSquared <= circle.Radius * circle.Radius );
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace Xen2D
         /// <returns>True if the point lies within the polygon, false otherwise.</returns>
         public static bool ContainsForComplexPolygon( Vector2 point, Vector2[] vertices, int numVertices )
         {
-            Vector3 checkPoint = new Vector3( point.X, point.Y, 0.0f );
+            //Vector3 checkPoint = new Vector3( point.X, point.Y, 0.0f );
             int leftSide = 0, rightSide = 0;
             for( int i = 0; i < numVertices; i++ )
             {
