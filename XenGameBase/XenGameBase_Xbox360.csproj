@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{05C54590-CD40-4D3E-B453-E40235222AD7}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XenGameBase</RootNamespace>
+    <AssemblyName>XenGameBase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaProfile>Reach</XnaProfile>
+    <XnaCrossPlatformGroupID>ef68d21c-91cb-45b2-8c73-29e2d7c1741d</XnaCrossPlatformGroupID>
+    <XnaOutputType>Library</XnaOutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xen2D\Xen2D_Xbox360.csproj">
+      <Project>{A8B59E7F-C450-47B8-91A1-D9C875BBFFD7}</Project>
+      <Name>Xen2D_Xbox360</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XenAspects\XenAspects_Xbox360.csproj">
+      <Project>{A021B8FF-0374-4063-90F0-7AE3006B86EB}</Project>
+      <Name>XenAspects_Xbox360</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviors\BehaviorBase.cs" />
+    <Compile Include="Behaviors\IBehavior.cs" />
+    <Compile Include="Behaviors\IBehaviorComparer.cs" />
+    <Compile Include="Behaviors\MouseScrollZoomBehavior.cs" />
+    <Compile Include="Behaviors\SortedBehaviorCollection.cs" />
+    <Compile Include="Elements\CompositeElement2D.cs" />
+    <Compile Include="Elements\Element2D.cs" />
+    <Compile Include="Elements\ElementDecorator.cs" />
+    <Compile Include="Elements\IElement2DComparer.cs" />
+    <Compile Include="Elements\IElementDecorator.cs" />
+    <Compile Include="Elements\SortedDecoratorCollection.cs" />
+    <Compile Include="Elements\SortedElementCollection.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="GameBase.cs" />
+    <Compile Include="GameTemplate.cs" />
+    <Compile Include="GameTimeUtility.cs" />
+    <Compile Include="Graphics\ScreenUtility.cs" />
+    <Compile Include="ILayerComparer.cs" />
+    <Compile Include="Input\IAcceptsInput.cs" />
+    <Compile Include="Input\InputState.cs" />
+    <Compile Include="Input\XenMouse.cs" />
+    <Compile Include="Input\XenMouseState.cs" />
+    <Compile Include="Layer.cs" />
+    <Compile Include="Plugin\IXenPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scene.cs" />
+    <Compile Include="SortedLayerCollection.cs" />
+    <Compile Include="XenResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XenResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arial.xnb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XenResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XenResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(SolutionDir)bin\$(ConfigurationName)\$(PlatformName)"
+copy "$(TargetPath)" "$(SolutionDir)bin\$(ConfigurationName)\$(PlatformName)\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02BB7175-7A1E-4192-9FA0-EACCAD307E4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XenScript</RootNamespace>
+    <AssemblyName>XenScript</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\IAction.cs" />
+    <Compile Include="Action\IActionExecutor.cs" />
+    <Compile Include="Actor\Capability.cs" />
+    <Compile Include="Actor\IActor.cs" />
+    <Compile Include="Command\CommandIssuanceResponse.cs" />
+    <Compile Include="Command\CommandExecutionResponse.cs" />
+    <Compile Include="Command\CommandResponse.cs" />
+    <Compile Include="Command\CommandRouter.cs" />
+    <Compile Include="Command\IEntity.cs" />
+    <Compile Include="Command\IDirector.cs" />
+    <Compile Include="Command\ICommandExecutor.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\ICommandRouter.cs" />
+    <Compile Include="Conditions\Condition.cs" />
+    <Compile Include="Conditions\ConditionSimpleComparison.cs" />
+    <Compile Include="Conditions\ConditionSingleNumericComparison.cs" />
+    <Compile Include="Conditions\ConditionSubjectChanged.cs" />
+    <Compile Include="Conditions\ConditionSubjectIsNull.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xen2D\Xen2D.csproj">
+      <Project>{2553B117-606F-4CAE-B5BC-1BE0B513F14D}</Project>
+      <Name>Xen2D %28Xen2D\Xen2D%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XenAspects\XenAspects.csproj">
+      <Project>{195D4D7B-F808-4B08-8771-9C94B9522BD0}</Project>
+      <Name>XenAspects %28XenAspects\XenAspects%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XenGameBase\XenGameBase.csproj">
+      <Project>{FC4E2304-5266-4C98-8702-F3AF97CAD1F2}</Project>
+      <Name>XenGameBase %28XenGameBase\XenGameBase%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

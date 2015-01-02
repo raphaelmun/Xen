@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{9F3140B2-EFF3-483A-BFA7-8ED821D22B06}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Windows Phone</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xen2D</RootNamespace>
+    <AssemblyName>Xen2D</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows Phone</XnaPlatform>
+    <XnaProfile>Reach</XnaProfile>
+    <XnaCrossPlatformGroupID>2307390f-c13d-4b14-8e20-db84264de796</XnaCrossPlatformGroupID>
+    <XnaOutputType>Library</XnaOutputType>
+    <XapFilename Condition="$(XnaOutputType)=='Game'">$(AssemblyName).xap</XapFilename>
+    <SilverlightManifestTemplate Condition="$(XnaOutputType)=='Game'">Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <XnaWindowsPhoneManifestTemplate Condition="$(XnaOutputType)=='Game'">Properties\WMAppManifest.xml</XnaWindowsPhoneManifestTemplate>
+    <TileImage Condition="$(XnaOutputType)=='Game'">Background.png</TileImage>
+    <TileTitle Condition="$(XnaOutputType)=='Game'">TileTitle</TileTitle>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Windows Phone' ">
+    <OutputPath>bin\Windows Phone\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;WINDOWS_PHONE</DefineConstants>
+    <XnaCompressContent>false</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Windows Phone' ">
+    <OutputPath>bin\Windows Phone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;WINDOWS_PHONE</DefineConstants>
+    <XnaCompressContent>false</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Base Libraries|Windows Phone'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Windows Phone\Base Libraries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Windows Phone\Debug\Xen2D.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Demo_Windows|Windows Phone'">
+    <OutputPath>bin\Windows Phone\Demo_Windows\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Background.png">
+      <XnaPlatformSpecific>true</XnaPlatformSpecific>
+    </None>
+    <None Include="Properties\AppManifest.xml">
+      <XnaPlatformSpecific>true</XnaPlatformSpecific>
+    </None>
+    <None Include="Properties\WMAppManifest.xml">
+      <XnaPlatformSpecific>true</XnaPlatformSpecific>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collision\CollidableObject.cs" />
+    <Compile Include="Collision\CollidableObjectComparer.cs" />
+    <Compile Include="Collision\CollisionChecker.cs" />
+    <Compile Include="Collision\CollisionClasses.cs" />
+    <Compile Include="Collision\CollisionDetector.cs" />
+    <Compile Include="Collision\CollisionEvent.cs" />
+    <Compile Include="Collision\CollisionInteractionType.cs" />
+    <Compile Include="Collision\CollisionLifetimeEntry.cs" />
+    <Compile Include="Collision\CollisionLifetimeTracker.cs" />
+    <Compile Include="Collision\CollisionRuleEntry.cs" />
+    <Compile Include="Collision\CollisionRuleSet.cs" />
+    <Compile Include="Collision\CollisionRuleSetAll.cs" />
+    <Compile Include="Collision\ExtentIntersector.cs" />
+    <Compile Include="Collision\ICollisionDetector.cs" />
+    <Compile Include="Collision\ICollisionRuleSet.cs" />
+    <Compile Include="Collision\SweepAndPruneCollisionDetector.cs" />
+    <Compile Include="Core\ContentIdentifierAttribute.cs" />
+    <Compile Include="Core\IDrawable2D.cs" />
+    <Compile Include="Core\Interpolator.cs" />
+    <Compile Include="Core\IRenderable.cs" />
+    <Compile Include="Core\Globals.cs" />
+    <Compile Include="Core\IUpdateableEx.cs" />
+    <Compile Include="Core\MatrixUtility.cs" />
+    <Compile Include="Core\ScreenUtility.cs" />
+    <Compile Include="Core\SongCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SortedRenderable2DCollection.cs" />
+    <Compile Include="Core\SoundEffectCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SpriteFontCache.cs" />
+    <Compile Include="Core\TextureCache.cs" />
+    <Compile Include="Core\TextureInfoCache.cs" />
+    <Compile Include="Core\TextureSizeAttribute.cs" />
+    <Compile Include="Core\VectorUtility.cs" />
+    <Compile Include="Core\Viewport.cs" />
+    <Compile Include="Core\Viewport2D.cs" />
+    <Compile Include="Core\XenCache.cs" />
+    <Compile Include="Primitives\CircularExtent.cs" />
+    <Compile Include="Primitives\Component2D.cs" />
+    <Compile Include="Primitives\CompositeExtent.cs" />
+    <Compile Include="Primitives\CompositeRenderable2DBase.cs" />
+    <Compile Include="Primitives\ExtentBase.cs" />
+    <Compile Include="Primitives\ICircularExtent.cs" />
+    <Compile Include="Primitives\IExtent.cs" />
+    <Compile Include="Primitives\IPolygonExtent.cs" />
+    <Compile Include="Primitives\IRectangle.cs" />
+    <Compile Include="Primitives\IRectangularExtent.cs" />
+    <Compile Include="Primitives\IShape.cs" />
+    <Compile Include="Primitives\PlaceholderRenderable2DBase.cs" />
+    <Compile Include="Primitives\PolygonExtent.cs" />
+    <Compile Include="Primitives\PositionTimeEntry2D.cs" />
+    <Compile Include="Primitives\PositionTimeHistory2D.cs" />
+    <Compile Include="Primitives\RectangularExtent.cs" />
+    <Compile Include="Primitives\Renderable2DBase.cs" />
+    <Compile Include="Primitives\RenderableBase.cs" />
+    <Compile Include="Primitives\ShapeCircle.cs" />
+    <Compile Include="Primitives\ShapeComplexPolygon.cs" />
+    <Compile Include="Primitives\ShapePolygon.cs" />
+    <Compile Include="Primitives\ShapePolygon2DBase.cs" />
+    <Compile Include="Primitives\ShapeUtility.cs" />
+    <Compile Include="Primitives\Space2DTranslation.cs" />
+    <Compile Include="Primitives\VectorRectangle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sprites\AnimatedSprite.cs" />
+    <Compile Include="Sprites\AnimationStripDescriptor.cs" />
+    <Compile Include="Sprites\BasicLine2D.cs" />
+    <Compile Include="Sprites\AssetDescriptor.cs" />
+    <Compile Include="Sprites\CachedTextureDescriptor.cs" />
+    <Compile Include="Sprites\I2DDisplayModifiers.cs" />
+    <Compile Include="Sprites\IAnimatedSprite.cs" />
+    <Compile Include="Sprites\ISprite.cs" />
+    <Compile Include="Sprites\ITextureInfo.cs" />
+    <Compile Include="Sprites\RenderMode.cs" />
+    <Compile Include="Sprites\SinglePixel.cs" />
+    <Compile Include="Sprites\Sprite2D.cs" />
+    <Compile Include="Sprites\SpriteBatchEx.cs" />
+    <Compile Include="Sprites\SpriteDisplayAttributes.cs" />
+    <Compile Include="Sprites\StaticSprite.cs" />
+    <Compile Include="Core\XenMath.cs" />
+    <Compile Include="Text\XenString.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XenAspects\XenAspects_WindowsPhone.csproj">
+      <Project>{122104AD-52E4-4834-8218-100DB1159C3F}</Project>
+      <Name>XenAspects_WindowsPhone</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(SolutionDir)bin\$(ConfigurationName)\$(PlatformName)"
+copy "$(TargetPath)" "$(SolutionDir)bin\$(ConfigurationName)\$(PlatformName)\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>

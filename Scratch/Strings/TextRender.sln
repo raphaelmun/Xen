@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextRender", "TextRender\TextRender\TextRender.csproj", "{41638A17-FACF-4029-88EB-FDD5937F7D0E}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "TextRenderContent", "TextRender\TextRenderContent\TextRenderContent.contentproj", "{6A29712D-003D-4A02-87C4-DF07DE9C878D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41638A17-FACF-4029-88EB-FDD5937F7D0E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{41638A17-FACF-4029-88EB-FDD5937F7D0E}.Debug|x86.ActiveCfg = Debug|x86
+		{41638A17-FACF-4029-88EB-FDD5937F7D0E}.Debug|x86.Build.0 = Debug|x86
+		{41638A17-FACF-4029-88EB-FDD5937F7D0E}.Release|Any CPU.ActiveCfg = Release|x86
+		{41638A17-FACF-4029-88EB-FDD5937F7D0E}.Release|x86.ActiveCfg = Release|x86
+		{41638A17-FACF-4029-88EB-FDD5937F7D0E}.Release|x86.Build.0 = Release|x86
+		{6A29712D-003D-4A02-87C4-DF07DE9C878D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A29712D-003D-4A02-87C4-DF07DE9C878D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A29712D-003D-4A02-87C4-DF07DE9C878D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A29712D-003D-4A02-87C4-DF07DE9C878D}.Release|x86.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplineTest", "SplineTest\SplineTest\SplineTest.csproj", "{2E3B657D-52CC-4ED6-A774-A75CE583FD8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplineTestContent", "SplineTest\SplineTestContent\SplineTestContent.contentproj", "{E4B23BF5-F281-4DBE-802C-B2AC0B6DABB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterpolationTest", "InterpolationTest\InterpolationTest\InterpolationTest.csproj", "{5067D96F-397F-4AD2-AEA9-F28970176119}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterpolationTestContent", "InterpolationTest\InterpolationTestContent\InterpolationTestContent.contentproj", "{C148DD57-5ED3-4B0F-9F7D-711AA6B06843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweenTest", "TweenTest\TweenTest\TweenTest.csproj", "{B3E50866-10C9-495E-AC02-469BE3CB4858}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "TweenTestContent", "TweenTest\TweenTestContent\TweenTestContent.contentproj", "{E583C3F9-ABF9-47ED-9D08-16F08B6E519F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E3B657D-52CC-4ED6-A774-A75CE583FD8D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2E3B657D-52CC-4ED6-A774-A75CE583FD8D}.Debug|x86.ActiveCfg = Debug|x86
+		{2E3B657D-52CC-4ED6-A774-A75CE583FD8D}.Debug|x86.Build.0 = Debug|x86
+		{2E3B657D-52CC-4ED6-A774-A75CE583FD8D}.Release|Any CPU.ActiveCfg = Release|x86
+		{2E3B657D-52CC-4ED6-A774-A75CE583FD8D}.Release|x86.ActiveCfg = Release|x86
+		{2E3B657D-52CC-4ED6-A774-A75CE583FD8D}.Release|x86.Build.0 = Release|x86
+		{E4B23BF5-F281-4DBE-802C-B2AC0B6DABB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B23BF5-F281-4DBE-802C-B2AC0B6DABB0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E4B23BF5-F281-4DBE-802C-B2AC0B6DABB0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B23BF5-F281-4DBE-802C-B2AC0B6DABB0}.Release|x86.ActiveCfg = Debug|Any CPU
+		{5067D96F-397F-4AD2-AEA9-F28970176119}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{5067D96F-397F-4AD2-AEA9-F28970176119}.Debug|x86.ActiveCfg = Debug|x86
+		{5067D96F-397F-4AD2-AEA9-F28970176119}.Debug|x86.Build.0 = Debug|x86
+		{5067D96F-397F-4AD2-AEA9-F28970176119}.Release|Any CPU.ActiveCfg = Release|x86
+		{5067D96F-397F-4AD2-AEA9-F28970176119}.Release|x86.ActiveCfg = Release|x86
+		{5067D96F-397F-4AD2-AEA9-F28970176119}.Release|x86.Build.0 = Release|x86
+		{C148DD57-5ED3-4B0F-9F7D-711AA6B06843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C148DD57-5ED3-4B0F-9F7D-711AA6B06843}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C148DD57-5ED3-4B0F-9F7D-711AA6B06843}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C148DD57-5ED3-4B0F-9F7D-711AA6B06843}.Release|x86.ActiveCfg = Debug|Any CPU
+		{B3E50866-10C9-495E-AC02-469BE3CB4858}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B3E50866-10C9-495E-AC02-469BE3CB4858}.Debug|x86.ActiveCfg = Debug|x86
+		{B3E50866-10C9-495E-AC02-469BE3CB4858}.Debug|x86.Build.0 = Debug|x86
+		{B3E50866-10C9-495E-AC02-469BE3CB4858}.Release|Any CPU.ActiveCfg = Release|x86
+		{B3E50866-10C9-495E-AC02-469BE3CB4858}.Release|x86.ActiveCfg = Release|x86
+		{B3E50866-10C9-495E-AC02-469BE3CB4858}.Release|x86.Build.0 = Release|x86
+		{E583C3F9-ABF9-47ED-9D08-16F08B6E519F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E583C3F9-ABF9-47ED-9D08-16F08B6E519F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E583C3F9-ABF9-47ED-9D08-16F08B6E519F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E583C3F9-ABF9-47ED-9D08-16F08B6E519F}.Release|x86.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

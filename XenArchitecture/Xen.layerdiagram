@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="f722aa93-79cd-4efb-883f-9cbc4a2e13e1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="6c1d7c3d-d93c-436b-9c07-e8967160ed90" name="Aspects (XenAspects.dll)">
+      <childLayers>
+        <layer Id="fbc84e5a-3fe0-4060-8bd2-55911e5c2453" name="Object Pooling" />
+        <layer Id="60b3e30a-4a34-478a-8a9d-10a2afbc1055" name="Allocation-free Events" />
+        <layer Id="7c6ccd5d-3f25-4e53-a99e-5b5fd5c677d7" name="Memory Profiling" />
+        <layer Id="1af16614-5246-4943-9595-d3dd938a0035" name="Object Mutual Binding" />
+        <layer Id="599fd0d6-f591-4b42-84b9-9d35ba1fc21a" name="Composable Objects " />
+        <layer Id="2e65c5e7-ba0d-4db0-8e91-cfd1680366c5" name="Expiration / Lifetime" />
+        <layer Id="29f81c19-7a7b-4274-bade-cf51bb4ee770" name="Data Binding" />
+        <layer Id="34ae1175-3290-452f-807f-c81bcb42f675" name="Logging / Tracing / Analytics" />
+      </childLayers>
+    </layer>
+    <layer Id="bb8c1d0a-b12d-405c-a253-66dc5cb0922c" name="2D (Xen2D.dll)">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="2915083f-5cf4-45e0-a5a0-c668f60c3b13" direction="Forward">
+          <layerMoniker Id="6c1d7c3d-d93c-436b-9c07-e8967160ed90" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="66e7b419-a667-4040-8ffe-5d552169cc1d" direction="Forward">
+          <layerMoniker Id="1e373d70-88f4-427c-82d5-f53f89133299" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="a901fdb4-1d2c-4123-b41c-291654578849" direction="Forward">
+          <layerMoniker Id="21bfae68-de05-4690-b68b-3d1d5a99f452" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="cb72db1a-d974-4508-b802-75d1f0d5d5f5" name="Camera / Viewport" />
+        <layer Id="01653680-2fcd-48c1-a3e0-c50a7bf6a81a" name="Animation Strip" />
+        <layer Id="2bc08bad-3f0e-46fc-aa4e-f70dcc7398ec" name="Collision" />
+        <layer Id="22f4eda4-417b-40ea-aaf6-efe0226a3960" name="Text" />
+        <layer Id="3e99ca10-3068-4090-9824-fca35aaf19ed" name="Buffering / Render Context" />
+        <layer Id="9d2f8b97-d6c8-475b-88c0-afc7302b796d" name="Extended SpriteBatch" />
+        <layer Id="dd308223-e27c-4feb-a52a-56ca258bdc0b" name="Splines / Transforms" />
+        <layer Id="90b7c85d-2556-4a33-81bf-9aab1d8dafb7" name="Intersection" />
+        <layer Id="84b3d3c2-db4f-46a7-8e14-f124cbe37f73" name="Primitives" />
+        <layer Id="4bd0d6aa-a005-4927-85de-35b4e71e5d64" name="Clipping" />
+        <layer Id="b9289012-7eaf-43c7-9f88-e50b377852ab" name="Sprites" />
+        <layer Id="8b6df76a-24e7-4981-b209-a219115343d2" name="Extents" />
+        <layer Id="dd7e76de-cabe-4271-8db7-97566fe63535" name="Vector / Matrix / Time Helper" />
+        <layer Id="5296d7d9-db87-4037-bf54-69b3f4130ac7" name="Resource Manager" />
+      </childLayers>
+    </layer>
+    <layer Id="0e08bfc5-833f-4614-aedf-807429bd269b" name="GameBase (XenGameBase.dll)">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="59308ce0-cd36-44a4-8591-c2c549147e63" direction="Bidirectional">
+          <layerMoniker Id="950b2e37-e7f3-467e-8033-c0ba76b0ee7c" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="22d74c4c-abf8-4ae2-865e-073fe6576b2a" direction="Forward">
+          <layerMoniker Id="6c1d7c3d-d93c-436b-9c07-e8967160ed90" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="6ee76e3d-af14-4d35-a430-f11c279d17a5" direction="Forward">
+          <layerMoniker Id="bb8c1d0a-b12d-405c-a253-66dc5cb0922c" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="8764ebdf-020d-448f-bc88-0ec44a971aa6" name="Scenes" />
+        <layer Id="1a4ccf56-3dbb-451b-8b51-24f5bf63e475" name="GameBase" />
+        <layer Id="80961649-40a7-41f7-8693-af25bcb8d824" name="Touch / Gestures" />
+        <layer Id="94359e25-d8ad-4e55-bb27-402a03c8949b" name="Input / Controls" />
+        <layer Id="ea6a0f08-8c38-4bba-a3b9-52f39e742434" name="Layers" />
+        <layer Id="86c0ac12-9b27-4ab9-9e2f-d98ff92a6669" name="Entity Manager" />
+        <layer Id="0f8abd2c-f1c0-4adc-b344-2251d893111c" name="Entities" />
+        <layer Id="07d8caab-176c-4671-bfff-804468d51149" name="Plugins">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="7e95560f-d8be-4d72-af8e-a91222882885" direction="Forward">
+              <layerMoniker Id="47fa7ea0-03f7-4db3-94b0-d3cb20186fb1" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="950b2e37-e7f3-467e-8033-c0ba76b0ee7c" name="Scripting (XenScript.dll)">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="7686e5a6-bf6e-460b-b6b4-85e6cd322443" direction="Forward">
+          <layerMoniker Id="6c1d7c3d-d93c-436b-9c07-e8967160ed90" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="8e570730-9460-4cec-8753-e2ff412bf872" name="Scripting" />
+        <layer Id="1dca866b-f715-4efd-a3d4-02a5f1836b67" name="Transitions" />
+        <layer Id="1e85dd27-8c1c-45ae-acb5-850c1e97471d" name="Conditions" />
+        <layer Id="2484c7ba-cca9-4bb8-bed3-a942a1e467b1" name="Triggers" />
+        <layer Id="2d83b94b-164e-443e-a1be-ff7ad60ac9db" name="Serialization / Deserialization" />
+        <layer Id="f19e66bb-4019-400d-bf01-dbaf04cd526a" name="Key Frames" />
+        <layer Id="d63ffe07-1f78-4fe2-abca-cccc7a72dd1c" name="Parser" />
+      </childLayers>
+    </layer>
+    <layer Id="1e373d70-88f4-427c-82d5-f53f89133299" name="XNA" />
+    <layer Id="21bfae68-de05-4690-b68b-3d1d5a99f452" name="Silverlight" />
+    <layer Id="d509aafa-1d5f-4073-bb88-256d1770e79a" name="Games">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="1d2e675a-4be5-4880-a5ec-37f6c41339d9" direction="Forward">
+          <layerMoniker Id="950b2e37-e7f3-467e-8033-c0ba76b0ee7c" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="34688c8a-41ce-42b2-9b0e-e4c9d629dccc" direction="Forward">
+          <layerMoniker Id="f881fcf5-b371-4746-9aa7-97ee916c7511" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="f881fcf5-b371-4746-9aa7-97ee916c7511" name="Tools">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="8dafec04-cde7-4052-9bd3-c92086980b95" direction="Forward">
+          <layerMoniker Id="950b2e37-e7f3-467e-8033-c0ba76b0ee7c" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="47fa7ea0-03f7-4db3-94b0-d3cb20186fb1" name="Physics Engine" />
+  </layers>
+</layerModel>

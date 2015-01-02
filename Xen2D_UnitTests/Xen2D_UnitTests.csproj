@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E93FA516-430A-4F5A-8586-4C06DEF5324A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xen2D_UnitTests</RootNamespace>
+    <AssemblyName>Xen2D_UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Base Libraries|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Base Libraries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Xen2D_UnitTests.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Demo_Windows|AnyCPU'">
+    <OutputPath>bin\Demo_Windows\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssertHelper.cs" />
+    <Compile Include="WhenUsingCompositeRenderable2D.cs" />
+    <Compile Include="WhenUsingCollisionLifetimeTracker.cs" />
+    <Compile Include="WhenUsingCollisionLifetimeEntry.cs" />
+    <Compile Include="WhenUsingCollisionRuleSetAll.cs" />
+    <Compile Include="WhenUsingCollisionRuleSet.cs" />
+    <Compile Include="WhenUsingCollisionRuleEntry.cs" />
+    <Compile Include="WhenInheritingCollidableObject.cs" />
+    <Compile Include="Mocks\MockCollidableObject.cs" />
+    <Compile Include="WhenIntersectingCircleAndCircle.cs" />
+    <Compile Include="WhenUsingCollisionChecker.cs" />
+    <Compile Include="WhenUsingDrawable2DComparers.cs" />
+    <Compile Include="WhenUsingPositionTimeHistory.cs" />
+    <Compile Include="WhenUsingSortedRenderable2DCollection.cs" />
+    <Compile Include="WhenUsingShapeUtility.cs" />
+    <Compile Include="WhenUsingCircularExtent.cs" />
+    <Compile Include="WhenUsingExtentIntersector.cs" />
+    <Compile Include="WhenUsingExtentHelper.cs" />
+    <Compile Include="WhenUsingPolygonExtent.cs" />
+    <Compile Include="WhenUsingViewport2D.cs" />
+    <Compile Include="WhenUsingCompositeExtent.cs" />
+    <Compile Include="Mocks\MockGraphics.cs" />
+    <Compile Include="WhenUsingText2D.cs" />
+    <Compile Include="WhenUsingShapePolygon.cs" />
+    <Compile Include="WhenUsingRectangularExtent.cs" />
+    <Compile Include="WhenConstructingAnimationStrips.cs" />
+    <Compile Include="WhenUsingMatrixUtility.cs" />
+    <Compile Include="WhenInheritingExtentBase.cs" />
+    <Compile Include="WhenInheritingRenderableBase.cs" />
+    <Compile Include="WhenUsingSpriteDisplayAttributes.cs" />
+    <Compile Include="WhenInheritingRenderable2DBase.cs" />
+    <Compile Include="WhenUsingVectorRectangle.cs" />
+    <Compile Include="WhenUsingSpace2DTranslation.cs" />
+    <Compile Include="Mocks\MockGameClass.cs" />
+    <Compile Include="TestUtility.cs" />
+    <Compile Include="WhenUsingSinglePixel.cs" />
+    <Compile Include="WhenUsingBasicLine2D.cs" />
+    <Compile Include="WhenUsingXenMath.cs" />
+    <Compile Include="CopyTemplate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WhenUsingShapeCollision.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xen2D\Xen2D.csproj">
+      <Project>{2553B117-606F-4CAE-B5BC-1BE0B513F14D}</Project>
+      <Name>Xen2D %28Xen2D\Xen2D%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XenAspects\XenAspects.csproj">
+      <Project>{195D4D7B-F808-4B08-8771-9C94B9522BD0}</Project>
+      <Name>XenAspects %28XenAspects\XenAspects%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XenAspects_UnitTests\XenAspects_UnitTests.csproj">
+      <Project>{90DBE9B7-6C6A-4EED-9A5E-778386A1E529}</Project>
+      <Name>XenAspects_UnitTests</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

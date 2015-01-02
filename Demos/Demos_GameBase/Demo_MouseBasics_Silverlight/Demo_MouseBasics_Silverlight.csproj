@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9856FE4-6FA1-4834-92AD-02912687552B}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demo_MouseBasics_Silverlight</RootNamespace>
+    <AssemblyName>Demo_MouseBasics_Silverlight</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Demo_MouseBasics_Silverlight.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Demo_MouseBasics_Silverlight.App</SilverlightAppEntry>
+    <TestPageFileName>Demo_MouseBasics_SilverlightTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="SilverArcade.SilverSprite">
+      <HintPath>.\SilverArcade.SilverSprite.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverArcade.SilverSprite.Core">
+      <HintPath>.\SilverArcade.SilverSprite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Demo_MouseBasics\GameMain.cs">
+      <Link>GameMain.cs</Link>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\contentpack\Arial.spritefont">
+      <Link>Content\Arial.spritefont</Link>
+    </Content>
+    <Content Include="..\..\..\contentpack\CourierNew.spritefont">
+      <Link>Content\CourierNew.spritefont</Link>
+    </Content>
+    <Content Include="..\..\..\contentpack\textures\colored_rect_200x200.png">
+      <Link>Content\Textures\colored_rect_200x200.png</Link>
+    </Content>
+    <Content Include="..\..\..\contentpack\textures\explosion0.png">
+      <Link>Content\Textures\explosion0.png</Link>
+    </Content>
+    <Content Include="..\..\..\contentpack\textures\gray_rect_100x200.png">
+      <Link>Content\Textures\gray_rect_100x200.png</Link>
+    </Content>
+    <Content Include="..\..\..\contentpack\textures\marker_blue.png">
+      <Link>Content\Textures\marker_blue.png</Link>
+    </Content>
+    <Content Include="..\..\..\contentpack\textures\marker_green.png">
+      <Link>Content\Textures\marker_green.png</Link>
+    </Content>
+    <Content Include="..\..\..\contentpack\textures\marker_red.png">
+      <Link>Content\Textures\marker_red.png</Link>
+    </Content>
+    <Content Include="..\..\..\ContentPack\Textures\cursor.png">
+      <Link>Content\Textures\cursor.png</Link>
+    </Content>
+    <Content Include="..\..\..\contentpack\TimesNewRoman.spritefont">
+      <Link>Content\TimesNewRoman.spritefont</Link>
+    </Content>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Xen2D\Xen2D_Silverlight.csproj">
+      <Project>{8BCE492D-BB27-4A41-9CA0-4408B2F08260}</Project>
+      <Name>Xen2D_Silverlight</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\XenAspects\XenAspects_Silverlight.csproj">
+      <Project>{97B8B0CD-2E52-46E6-9206-16F4D2FFF055}</Project>
+      <Name>XenAspects_Silverlight</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\XenGameBase\XenGameBase_Silverlight.csproj">
+      <Project>{21685237-FF19-48FA-BBB6-97940492F9B0}</Project>
+      <Name>XenGameBase_Silverlight</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

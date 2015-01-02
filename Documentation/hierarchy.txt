@@ -1,0 +1,21 @@
+PooledObject
+
+	ComposableObject
+	
+		RenderableBase
+				+Enabled
+				+UpdateOrder
+				+Visible
+			
+			Component2D
+					+ModulationColor
+					+Opacity
+					+SpriteEffects
+					+LayerDepth
+				
+				Renderable2DBase
+						+Transform
+						+RenderingExtent
+						Element2D
+				
+				BehaviorBase

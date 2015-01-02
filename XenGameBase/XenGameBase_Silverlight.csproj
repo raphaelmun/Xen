@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21685237-FF19-48FA-BBB6-97940492F9B0}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XenGameBase</RootNamespace>
+    <AssemblyName>XenGameBase</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="SilverArcade.SilverSprite">
+      <HintPath>..\Xen2D\SilverArcade.SilverSprite.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverArcade.SilverSprite.Core">
+      <HintPath>..\Xen2D\SilverArcade.SilverSprite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviors\BehaviorBase.cs" />
+    <Compile Include="Behaviors\IBehavior.cs" />
+    <Compile Include="Behaviors\IBehaviorComparer.cs" />
+    <Compile Include="Behaviors\MouseScrollZoomBehavior.cs" />
+    <Compile Include="Behaviors\SortedBehaviorCollection.cs" />
+    <Compile Include="Elements\CompositeElement2D.cs" />
+    <Compile Include="Elements\Element2D.cs" />
+    <Compile Include="Elements\ElementDecorator.cs" />
+    <Compile Include="Elements\IElement2DComparer.cs" />
+    <Compile Include="Elements\IElementDecorator.cs" />
+    <Compile Include="Elements\SortedDecoratorCollection.cs" />
+    <Compile Include="Elements\SortedElementCollection.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="GameBase.cs" />
+    <Compile Include="GameTemplate.cs" />
+    <Compile Include="GameTimeUtility.cs" />
+    <Compile Include="Graphics\ScreenUtility.cs" />
+    <Compile Include="ILayerComparer.cs" />
+    <Compile Include="Input\IAcceptsInput.cs" />
+    <Compile Include="Input\InputState.cs" />
+    <Compile Include="Input\XenMouse.cs" />
+    <Compile Include="Input\XenMouseState.cs" />
+    <Compile Include="Layer.cs" />
+    <Compile Include="Plugin\IXenPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scene.cs" />
+    <Compile Include="SortedLayerCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xen2D\Xen2D_Silverlight.csproj">
+      <Project>{8BCE492D-BB27-4A41-9CA0-4408B2F08260}</Project>
+      <Name>Xen2D_Silverlight</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XenAspects\XenAspects_Silverlight.csproj">
+      <Project>{97B8B0CD-2E52-46E6-9206-16F4D2FFF055}</Project>
+      <Name>XenAspects_Silverlight</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Arial.xnb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(SolutionDir)bin\$(ConfigurationName)\Silverlight"
+copy "$(TargetPath)" "$(SolutionDir)bin\$(ConfigurationName)\Silverlight\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
